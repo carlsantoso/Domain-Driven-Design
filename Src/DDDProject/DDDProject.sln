@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDProject", "DDDProject\DDDProject.csproj", "{07A15852-34A0-4356-88CC-6194DA5581E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDDProject", "DDDProject\DDDProject.csproj", "{07A15852-34A0-4356-88CC-6194DA5581E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{E8D00013-2E14-4E87-BF55-9B05E177AF43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{6E33C61B-E928-4DC2-BEEA-2D8FEE536BFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{51B14092-FF10-4DDF-A9F4-DD1E08D3650C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migrations", "Migrations", "{F5ED0B9F-DA74-4EF1-8BF6-23133779235E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Master.Data", "DDD.Master.Data\DDD.Master.Data.csproj", "{AADFB347-4F73-4439-A469-1812BFE3E8E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +25,18 @@ Global
 		{07A15852-34A0-4356-88CC-6194DA5581E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07A15852-34A0-4356-88CC-6194DA5581E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07A15852-34A0-4356-88CC-6194DA5581E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AADFB347-4F73-4439-A469-1812BFE3E8E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AADFB347-4F73-4439-A469-1812BFE3E8E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AADFB347-4F73-4439-A469-1812BFE3E8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AADFB347-4F73-4439-A469-1812BFE3E8E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{51B14092-FF10-4DDF-A9F4-DD1E08D3650C} = {6E33C61B-E928-4DC2-BEEA-2D8FEE536BFC}
+		{F5ED0B9F-DA74-4EF1-8BF6-23133779235E} = {6E33C61B-E928-4DC2-BEEA-2D8FEE536BFC}
+		{AADFB347-4F73-4439-A469-1812BFE3E8E9} = {F5ED0B9F-DA74-4EF1-8BF6-23133779235E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B377941C-942D-4B92-8A81-A4311DD55818}
