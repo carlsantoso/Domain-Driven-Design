@@ -1,5 +1,0 @@
-﻿{
-  "ConnectionStrings": {
-    "DataAccessMsSqlServerProvider": "Data Source=CSSolutionsLLC;Initial Catalog=DDD;user=aplikasi;pwd=aplikasi;"
-  }
-}

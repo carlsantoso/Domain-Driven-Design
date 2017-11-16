@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using DDD.Master.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace DDDProject
 {
@@ -32,6 +34,9 @@ namespace DDDProject
         {
             //services.AddMvc();
             var sqlConnectionString = Configuration.GetConnectionString("DataAccessMsSqlServerProvider");
+
+            services.AddDbContext<DDDContext>(options => options.UseSqlServer(sqlConnectionString));
+            services.AddMvc();
 
         }
 
