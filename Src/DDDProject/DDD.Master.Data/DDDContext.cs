@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DDD.Master.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -29,16 +30,21 @@ namespace DDD.Master.Data
         {
             if (modelBuilder != null)
             {
-                modelBuilder.Entity<MsCourse>().ToTable("MsCourse");
-                modelBuilder.Entity<MsEmployee>().ToTable("MsEmployee");
-                modelBuilder.Entity<MsLocation>().ToTable("MsLocation");
-                modelBuilder.Entity<MsPeriod>().ToTable("MsPeriod");
-                modelBuilder.Entity<TrEnrollment>().ToTable("TrEnrollment");
-                modelBuilder.Entity<TrEnrollmentCourse>().ToTable("TrEnrollmentCourse");
-                modelBuilder.Entity<TrEnrollmentResult>().ToTable("TrEnrollmentResult");
-                modelBuilder.Entity<TrSchedule>().ToTable("TrSchedule");
-                modelBuilder.Entity<TrScheduleResult>().ToTable("TrScheduleResult");
-                modelBuilder.Entity<TrScheduleResultDetail>().ToTable("TrScheduleResultDetail");
+                //modelBuilder.Entity<MsCourse>().ToTable("MsCourse");
+                //modelBuilder.Entity<MsEmployee>().ToTable("MsEmployee");
+                //modelBuilder.Entity<MsLocation>().ToTable("MsLocation");
+                //modelBuilder.Entity<MsPeriod>().ToTable("MsPeriod");
+                //modelBuilder.Entity<TrEnrollment>().ToTable("TrEnrollment");
+                //modelBuilder.Entity<TrEnrollmentCourse>().ToTable("TrEnrollmentCourse");
+                //modelBuilder.Entity<TrEnrollmentResult>().ToTable("TrEnrollmentResult");
+                //modelBuilder.Entity<TrSchedule>().ToTable("TrSchedule");
+                //modelBuilder.Entity<TrScheduleResult>().ToTable("TrScheduleResult");
+                //modelBuilder.Entity<TrScheduleResultDetail>().ToTable("TrScheduleResultDetail");
+                base.OnModelCreating(modelBuilder);
+
+                new MsCourseConfiguration(modelBuilder.Entity<MsCourse>());
+                new TrEnrollmentResultConfiguration(modelBuilder.Entity<TrEnrollmentResult>());
+
             }
         }
     }
