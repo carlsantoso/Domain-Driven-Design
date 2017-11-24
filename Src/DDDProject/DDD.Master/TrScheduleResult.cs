@@ -20,7 +20,7 @@ namespace DDD.Master
 
         public int LocationId { get; set; }
 
-        public ICollection<TrScheduleResultDetail> ScheduleResultDetails { get; set; }
+        //public ICollection<TrScheduleResultDetail> ScheduleResultDetails { get; set; }
 
         public virtual MsEmployee Trainer { get; set; }
 
@@ -29,5 +29,21 @@ namespace DDD.Master
         public virtual MsCourse Course { get; set; }
 
         public virtual MsPeriod Periode { get; set; }
+
+        private IList<TrScheduleResultDetail> _scheduleResultDetail;
+        public IEnumerable<TrScheduleResultDetail> ScheduleResultDetails
+        {
+            get
+            {
+                return _scheduleResultDetail;
+            }
+        }
+
+        public void AddScheduleResultDetail(TrScheduleResultDetail scheduleResultDetail)
+        {
+            //Do something if needed
+            this._scheduleResultDetail.Add(scheduleResultDetail);
+            //event to raise if any?
+        }
     }
 }

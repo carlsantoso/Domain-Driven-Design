@@ -15,5 +15,22 @@ namespace DDD.Master
         public DateTime EnrollStart { get; set; }
 
         public DateTime EnrollEnd { get; set; }
+
+        private IList<TrEnrollmentCourse> _enrollmentCourse;
+        public IEnumerable<TrEnrollmentCourse> EnrollmentCourses
+        {
+            get
+            {
+                return _enrollmentCourse;
+            }
+        }
+
+        public void AddEnrollmentCourse(TrEnrollmentCourse enrollmentCourse)
+        {
+            //Do something if needed
+            this._enrollmentCourse.Add(enrollmentCourse);
+            //event to raise if any?
+        }
+
     }
 }

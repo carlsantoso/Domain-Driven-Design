@@ -6,9 +6,9 @@ using System.Text;
 
 namespace DDD.Master.Data
 {
-    public class DDDContext : DbContext
+    public class EFDBContext : DbContext
     {
-        public DDDContext(DbContextOptions<DDDContext> options) : base(options)
+        public EFDBContext(DbContextOptions<EFDBContext> options) : base(options)
         {
             Database.EnsureDeleted();
             Database.EnsureCreated();

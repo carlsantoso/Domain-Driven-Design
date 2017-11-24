@@ -35,7 +35,7 @@ namespace DDDProject
             //services.AddMvc();
             var sqlConnectionString = Configuration.GetConnectionString("DataAccessMsSqlServerProvider");
 
-            services.AddDbContext<DDDContext>(options => options.UseSqlServer(sqlConnectionString));
+            services.AddDbContext<EFDBContext>(options => options.UseSqlServer(sqlConnectionString));
             services.AddMvc();
 
         }
